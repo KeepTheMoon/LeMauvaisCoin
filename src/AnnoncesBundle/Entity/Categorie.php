@@ -24,4 +24,14 @@ class Categorie
     {
         return $this->catNomcat;
     }
+
+    /**
+     * __toString()
+     *
+     * @return string 
+     */
+    public function __toString()
+    {
+        return $this->catNomcat;
+    }
 }

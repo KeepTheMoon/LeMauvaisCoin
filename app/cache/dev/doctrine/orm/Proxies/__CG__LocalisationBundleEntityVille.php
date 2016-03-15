@@ -254,4 +254,15 @@ class Ville extends \LocalisationBundle\Entity\Ville implements \Doctrine\ORM\Pr
         return parent::getIddepartement();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

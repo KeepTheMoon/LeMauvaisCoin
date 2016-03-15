@@ -4,19 +4,23 @@ namespace AnnoncesBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AnnoncesBundle\Entity\Annonce;
 use AnnoncesBundle\Form\AnnonceType;
 
 /**
  * Annonce controller.
  *
+ * @Route("/annonce")
  */
 class AnnonceController extends Controller
 {
     /**
      * Lists all Annonce entities.
      *
+     * @Route("/", name="annonce_index")
+     * @Method("GET")
      */
     public function indexAction()
     {
@@ -32,6 +36,8 @@ class AnnonceController extends Controller
     /**
      * Creates a new Annonce entity.
      *
+     * @Route("/new", name="annonce_new")
+     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -40,12 +46,16 @@ class AnnonceController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $user = $this->get('security.token_storage')->getToken()->getUser();
+            $annonce->setAuser($user);
             $em = $this->getDoctrine()->getManager();
             $em->persist($annonce);
             $em->flush();
 
-            return $this->redirectToRoute('annonce_show', array('id' => $annonce->getId()));
+            return $this->redirectToRoute('annonce_show', array('id' => $annonce->getAId()));
         }
+
+
 
         return $this->render('annonce/new.html.twig', array(
             'annonce' => $annonce,
@@ -56,6 +66,8 @@ class AnnonceController extends Controller
     /**
      * Finds and displays a Annonce entity.
      *
+     * @Route("/{id}", name="annonce_show")
+     * @Method("GET")
      */
     public function showAction(Annonce $annonce)
     {
@@ -70,6 +82,8 @@ class AnnonceController extends Controller
     /**
      * Displays a form to edit an existing Annonce entity.
      *
+     * @Route("/{id}/edit", name="annonce_edit")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Annonce $annonce)
     {
@@ -82,7 +96,7 @@ class AnnonceController extends Controller
             $em->persist($annonce);
             $em->flush();
 
-            return $this->redirectToRoute('annonce_edit', array('id' => $annonce->getId()));
+            return $this->redirectToRoute('annonce_edit', array('id' => $annonce->getAId()));
         }
 
         return $this->render('annonce/edit.html.twig', array(
@@ -95,6 +109,8 @@ class AnnonceController extends Controller
     /**
      * Deletes a Annonce entity.
      *
+     * @Route("/{id}", name="annonce_delete")
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Annonce $annonce)
     {
@@ -120,7 +136,7 @@ class AnnonceController extends Controller
     private function createDeleteForm(Annonce $annonce)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('annonce_delete', array('id' => $annonce->getId())))
+            ->setAction($this->generateUrl('annonce_delete', array('id' => $annonce->getAId())))
             ->setMethod('DELETE')
             ->getForm()
         ;

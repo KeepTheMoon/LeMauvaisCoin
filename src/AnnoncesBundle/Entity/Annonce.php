@@ -3,8 +3,6 @@
 namespace AnnoncesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use \UserBundle\Entity\User;
-
 
 /**
  * Annonce
@@ -47,19 +45,24 @@ class Annonce
     private $aType;
 
     /**
-     * @var \AnnoncesBundle\Entity\Utilisateures
-     */
-    private $auser;
-
-    /**
-     * @var \AnnoncesBundle\Entity\Categorie
+     * @var string
      */
     private $aNomcat;
 
     /**
-     * @var \AnnoncesBundle\Entity\Ville
+     * @var \UserBundle\Entity\User
+     */
+    private $auser;
+
+    /**
+     * @var \LocalisationBundle\Entity\Ville
      */
     private $aville;
+
+      /**
+     * @var integer
+     */
+    private $atel;
 
 
     /**
@@ -141,6 +144,29 @@ class Annonce
         return $this->aPrix;
     }
 
+
+       /**
+     * Set atel
+     *
+     * @param integer $atel
+     * @return Annonce
+     */
+    public function setAtel($atel)
+    {
+        $this->atel = $atel;
+
+        return $this;
+    }
+
+    /**
+     * Get aPrix
+     *
+     * @return integer 
+     */
+    public function getAtel()
+    {
+        return $this->atel;
+    }
     /**
      * Set aImage
      *
@@ -187,15 +213,6 @@ class Annonce
         return $this->aProfessionnel;
     }
 
-
-    /**
-     * Get aIdville
-     *
-     * @return string 
-     */
-    public function getAIdVille(){
-        return ($this->aville);
-    }
     /**
      * Set aType
      *
@@ -217,29 +234,6 @@ class Annonce
     public function getAType()
     {
         return $this->aType;
-    }
-
-    /**
-     * Set auser
-     *
-     * @param \AnnoncesBundle\Entity\Utilisateures $auser
-     * @return Annonce
-     */
-    public function setAuser(\AnnoncesBundle\Entity\Utilisateures $auser = null)
-    {
-        $this->auser = $auser;
-
-        return $this;
-    }
-
-    /**
-     * Get auser
-     *
-     * @return \AnnoncesBundle\Entity\Utilisateures 
-     */
-    public function getAuser()
-    {
-        return $this->auser;
     }
 
     /**
@@ -266,12 +260,35 @@ class Annonce
     }
 
     /**
-     * Set aville
+     * Set auser
      *
-     * @param \AnnoncesBundle\Entity\Ville $aville
+     * @param \UserBundle\Entity\User $auser
      * @return Annonce
      */
-    public function setAville(\AnnoncesBundle\Entity\Ville $aville = null)
+    public function setAuser(\UserBundle\Entity\User $auser )
+    {
+        $this->auser = $auser;
+
+        return $this;
+    }
+
+    /**
+     * Get auser
+     *
+     * @return \UserBundle\Entity\Utilisateures 
+     */
+    public function getAuser()
+    {
+        return $this->auser;
+    }
+
+    /**
+     * Set aville
+     *
+     * @param \LocalisationBundle\Entity\Ville $aville
+     * @return Annonce
+     */
+    public function setAville(\LocalisationBundle\Entity\Ville $aville )
     {
         $this->aville = $aville;
 
@@ -281,7 +298,7 @@ class Annonce
     /**
      * Get aville
      *
-     * @return \AnnoncesBundle\Entity\Ville 
+     * @return \LocalisationBundle\Entity\Ville 
      */
     public function getAville()
     {

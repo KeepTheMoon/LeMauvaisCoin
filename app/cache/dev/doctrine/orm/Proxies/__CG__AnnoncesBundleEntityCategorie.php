@@ -188,4 +188,15 @@ class Categorie extends \AnnoncesBundle\Entity\Categorie implements \Doctrine\OR
         return parent::getCatNomcat();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+
+        return parent::__toString();
+    }
+
 }

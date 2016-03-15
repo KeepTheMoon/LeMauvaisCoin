@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'APCUIterator' => $vendorDir . '/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php',
     'AppCache' => $baseDir . '/app/AppCache.php',
     'AppKernel' => $baseDir . '/app/AppKernel.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
@@ -23,9 +22,4 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/polyfill-php54/Resources/stubs/SessionHandlerInterface.php',
     'SqlFormatter' => $vendorDir . '/jdorn/sql-formatter/lib/SqlFormatter.php',
     'TypeError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
-    'lessc' => $vendorDir . '/leafo/lessphp/lessc.inc.php',
-    'lessc_formatter_classic' => $vendorDir . '/leafo/lessphp/lessc.inc.php',
-    'lessc_formatter_compressed' => $vendorDir . '/leafo/lessphp/lessc.inc.php',
-    'lessc_formatter_lessjs' => $vendorDir . '/leafo/lessphp/lessc.inc.php',
-    'lessc_parser' => $vendorDir . '/leafo/lessphp/lessc.inc.php',
 );

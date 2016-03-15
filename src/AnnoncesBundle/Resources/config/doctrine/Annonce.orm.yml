@@ -17,6 +17,9 @@ AnnoncesBundle\Entity\Annonce:
         a_nomCat:
             columns:
                 - a_nomCat
+        a_nomV_2:
+            columns:
+                - a_idVille
         a_idVille:
             columns:
                 - a_idVille
@@ -66,16 +69,11 @@ AnnoncesBundle\Entity\Annonce:
             nullable: false
             comment: '0 pour offre 1 pour demande'
             column: a_type
+        atel : 
+            type: integer 
+            nullable: true 
+            column: a_tel
     manyToOne:
-        auser:
-            targetEntity: \UserBundle\Entity\User
-            cascade: {  }
-            mappedBy: null
-            inversedBy: null
-            joinColumns:
-                a_idUser:
-                    referencedColumnName: id
-            orphanRemoval: false
         aNomcat:
             targetEntity: Categorie
             cascade: {  }
@@ -85,8 +83,17 @@ AnnoncesBundle\Entity\Annonce:
                 a_nomCat:
                     referencedColumnName: cat_nomCat
             orphanRemoval: false
+        auser:
+            targetEntity: UserBundle\Entity\User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                a_idUser:
+                    referencedColumnName: id
+            orphanRemoval: false
         aville:
-            targetEntity: \LocalisationBundle\Entity\Ville
+            targetEntity: LocalisationBundle\Entity\Ville
             cascade: {  }
             mappedBy: null
             inversedBy: null

@@ -21,9 +21,9 @@ class AnnonceType extends AbstractType
             ->add('aImage')
             ->add('aProfessionnel')
             ->add('aType')
-            ->add('auser')
-            ->add('a_Nomcat')
-            ->add('a_idVille')
+            ->add('aNomcat')
+            ->add('aville')
+            ->add('atel')
         ;
     }
     

@@ -6,33 +6,42 @@
     <table>
         <tbody>
             <tr>
-                <th>Aid</th>
-                <td>{{ annonce.aId }}</td>
-            </tr>
-            <tr>
-                <th>Atitre</th>
+                <th>Titre </th>
                 <td>{{ annonce.aTitre }}</td>
             </tr>
             <tr>
-                <th>Adescription</th>
+                <th>Description</th>
                 <td>{{ annonce.aDescription }}</td>
             </tr>
             <tr>
-                <th>Aprix</th>
+                <th>Prix</th>
                 <td>{{ annonce.aPrix }}</td>
             </tr>
             <tr>
-                <th>Aimage</th>
+                <th>Image</th>
                 <td>{{ annonce.aImage }}</td>
             </tr>
             <tr>
-                <th>Aprofessionnel</th>
-                <td>{% if annonce.aProfessionnel %}Yes{% else %}No{% endif %}</td>
+                <th>Vendeur</th>
+                <td>{% if annonce.aProfessionnel %}Professionnel{% else %}Particulier{% endif %}</td>
             </tr>
             <tr>
-                <th>Atype</th>
-                <td>{% if annonce.aType %}Yes{% else %}No{% endif %}</td>
+                <th>Type</th>
+                <td>{% if annonce.aType %}Offre{% else %}Demande{% endif %}</td>
             </tr>
+            <tr>
+                <th>Contact</th>
+            </tr>
+                
+                <td>{{ annonce.getAuser}}</td>
+                <th>Mail </th>
+                <td>{{ annonce.getAuser.getEmail()}}</td>
+                <th> Telephone </th>
+                <td>{% if annonce.aTel ==0 %}Non communiqué{% else %}{{annonce.aTel}}{% endif %}</td>
+
+
+            </tr>
+
         </tbody>
     </table>
 

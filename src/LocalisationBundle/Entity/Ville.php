@@ -86,7 +86,6 @@ class Ville
         return $this->nomville;
     }
 
-
     /**
      * Set iddepartement
      *
@@ -108,5 +107,15 @@ class Ville
     public function getIddepartement()
     {
         return $this->iddepartement;
+    }
+
+    /**
+     * __toString()
+     *
+     * @return string 
+     */
+    public function __toString()
+    {
+        return $this->nomville;
     }
 }

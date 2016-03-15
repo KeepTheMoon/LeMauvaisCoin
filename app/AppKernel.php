@@ -18,7 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
 
             new UserBundle\UserBundle(),
-
+            new Liip\ImagineBundle\LiipImagineBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new LocalisationBundle\LocalisationBundle(),
             new AnnoncesBundle\AnnoncesBundle(),

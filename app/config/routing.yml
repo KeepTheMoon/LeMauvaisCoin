@@ -1,3 +1,7 @@
+annonces_annonce:
+    resource: "@AnnoncesBundle/Controller/AnnonceController.php"
+    type:     annotation
+
 annonces:
     resource: "@AnnoncesBundle/Resources/config/routing.yml"
     prefix:   /
@@ -32,3 +36,6 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"    
