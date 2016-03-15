@@ -238,6 +238,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AnnoncesBundle\\Controller\\DefaultController::indexAction',  '_route' => 'annonces_homepage',);
         }
 
+        if (0 === strpos($pathinfo, '/annonce')) {
+            // search
+            if ($pathinfo === '/annonce/search') {
+                return array (  '_controller' => 'AnnoncesBundle\\Controller\\RechercheController::searchAction',  '_route' => 'search',);
+            }
+
+            // mes_annonces
+            if ($pathinfo === '/annonce/mesannonces') {
+                return array (  '_controller' => 'AnnoncesBundle\\Controller\\RechercheController::mesAnnoncesAction',  '_route' => 'mes_annonces',);
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/departement')) {
             // departement_index
             if (rtrim($pathinfo, '/') === '/departement') {

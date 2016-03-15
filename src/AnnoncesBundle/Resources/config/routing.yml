@@ -9,3 +9,11 @@ annonces_categorie:
 annonces_homepage:
     path:     /
     defaults: { _controller: AnnoncesBundle:Default:index }
+
+search:
+    path:     annonce/search
+    defaults: { _controller: AnnoncesBundle:Recherche:search }
+
+mes_annonces:
+    path:     annonce/mesannonces
+    defaults: { _controller: AnnoncesBundle:Recherche:mesAnnonces }
