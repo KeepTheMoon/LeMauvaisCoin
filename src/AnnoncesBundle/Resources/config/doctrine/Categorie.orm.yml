@@ -1,0 +1,14 @@
+AnnoncesBundle\Entity\Categorie:
+    type: entity
+    table: categorie
+    id:
+        catNomcat:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            id: true
+            column: cat_nomCat
+            generator:
+                strategy: IDENTITY
+    lifecycleCallbacks: {  }

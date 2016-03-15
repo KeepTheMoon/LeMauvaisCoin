@@ -1,0 +1,12 @@
+localisation_departement:
+    resource: "@LocalisationBundle/Resources/config/routing/departement.yml"
+    prefix:   /departement
+
+localisation_region:
+    resource: "@LocalisationBundle/Resources/config/routing/region.yml"
+    prefix:   /region
+
+
+localisation_homepage:
+    path:     /
+    defaults: { _controller: LocalisationBundle:Default:index }

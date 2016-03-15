@@ -1,0 +1,40 @@
+LocalisationBundle\Entity\Departement:
+    type: entity
+    table: departement
+    indexes:
+        IdDepartement:
+            columns:
+                - IdDepartement
+                - IdRegion
+        departement_ibfk_region:
+            columns:
+                - IdRegion
+    id:
+        iddepartement:
+            type: string
+            nullable: false
+            length: 3
+            fixed: false
+            comment: 'id = code insee'
+            id: true
+            column: IdDepartement
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomdepartement:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            column: NomDepartement
+    manyToOne:
+        idregion:
+            targetEntity: Region
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                IdRegion:
+                    referencedColumnName: IdRegion
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

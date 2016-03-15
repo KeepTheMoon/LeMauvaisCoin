@@ -1,0 +1,21 @@
+<div class = "container">
+	<div class="wrapper">
+		<form class="form-horizontal" action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+		    <h3 class="form-signin-heading">Pour vous enregistrer, veuillez remplir le formulaire suivant : </h3>
+			  <hr class="colorgraph"><br>
+
+
+    {{ form_start(form) }}
+      {{ form_row(form.username, { 'attr': {'placeholder': "Nom d'utilisateur", 'class': 'form-control'} }) }}
+        {{ form_row(form.email,  { 'attr': {'placeholder': 'Email', 'class': 'form-control'} }) }}
+        {{ form_row(form.plainPassword.first,  { 'attr': {'placeholder': 'Mot de passe', 'class': 'form-control'} }) }}
+        {{ form_row(form.plainPassword.second,  { 'attr': {'placeholder': 'Confirmez', 'class': 'form-control'} }) }}
+
+    {{ form_end(form) }}
+    <div>
+
+        <input class="btn btn-lg btn-success btn-block" type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
+    </div>
+</form>
+	</div>
+</div>

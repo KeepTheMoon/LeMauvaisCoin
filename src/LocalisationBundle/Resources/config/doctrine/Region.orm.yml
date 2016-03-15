@@ -1,0 +1,27 @@
+LocalisationBundle\Entity\Region:
+    type: entity
+    table: region
+    indexes:
+        IdRegion:
+            columns:
+                - IdRegion
+        IdRegion_2:
+            columns:
+                - IdRegion
+    id:
+        idregion:
+            type: integer
+            nullable: false
+            unsigned: true
+            id: true
+            column: IdRegion
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomregion:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            column: NomRegion
+    lifecycleCallbacks: {  }

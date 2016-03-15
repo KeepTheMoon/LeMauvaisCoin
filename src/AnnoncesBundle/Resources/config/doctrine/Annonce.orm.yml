@@ -1,0 +1,97 @@
+AnnoncesBundle\Entity\Annonce:
+    type: entity
+    table: annonce
+    indexes:
+        categorie:
+            columns:
+                - a_nomCat
+        a_categorie:
+            columns:
+                - a_nomCat
+        a_mail:
+            columns:
+                - a_idUser
+        a_nomV:
+            columns:
+                - a_idVille
+        a_nomCat:
+            columns:
+                - a_nomCat
+        a_idVille:
+            columns:
+                - a_idVille
+        a_idUser:
+            columns:
+                - a_idUser
+    id:
+        aId:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: a_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        aTitre:
+            type: string
+            nullable: false
+            length: 252
+            fixed: false
+            column: a_titre
+        aDescription:
+            type: string
+            nullable: false
+            length: 252
+            fixed: false
+            column: a_description
+        aPrix:
+            type: integer
+            nullable: true
+            unsigned: true
+            column: a_prix
+        aImage:
+            type: string
+            nullable: false
+            length: 252
+            fixed: false
+            column: a_image
+        aProfessionnel:
+            type: boolean
+            nullable: false
+            comment: '0 particulier 1 si c''est un pro'
+            column: a_professionnel
+        aType:
+            type: boolean
+            nullable: false
+            comment: '0 pour offre 1 pour demande'
+            column: a_type
+    manyToOne:
+        auser:
+            targetEntity: \UserBundle\Entity\User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                a_idUser:
+                    referencedColumnName: id
+            orphanRemoval: false
+        aNomcat:
+            targetEntity: Categorie
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                a_nomCat:
+                    referencedColumnName: cat_nomCat
+            orphanRemoval: false
+        aville:
+            targetEntity: \LocalisationBundle\Entity\Ville
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                a_idVille:
+                    referencedColumnName: IdVille
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

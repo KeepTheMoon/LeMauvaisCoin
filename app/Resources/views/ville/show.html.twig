@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ville</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Idville</th>
+                <td>{{ ville.idville }}</td>
+            </tr>
+            <tr>
+                <th>Codepostal</th>
+                <td>{{ ville.codepostal }}</td>
+            </tr>
+            <tr>
+                <th>Nomville</th>
+                <td>{{ ville.nomville }}</td>
+            </tr>
+            <tr>
+                <th>Iddepartement</th>
+                <td>{{ ville.iddepartement }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ville_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('ville_edit', { 'id': ville.idville }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

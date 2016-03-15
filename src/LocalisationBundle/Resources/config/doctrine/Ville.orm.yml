@@ -1,0 +1,41 @@
+LocalisationBundle\Entity\Ville:
+    type: entity
+    table: ville
+    indexes:
+        IdVille:
+            columns:
+                - IdVille
+        IdDepartement:
+            columns:
+                - IdDepartement
+    id:
+        idville:
+            type: string
+            nullable: false
+            length: 5
+            fixed: false
+            comment: 'id = code insee'
+            id: true
+            column: IdVille
+            generator:
+                strategy: IDENTITY
+    fields:
+        codepostal:
+            type: integer
+            nullable: false
+            unsigned: true
+            column: CodePostal
+        nomville:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            column: NomVille
+        iddepartement:
+            type: string
+            nullable: false
+            length: 3
+            fixed: false
+            comment: 'id = code insee'
+            column: IdDepartement
+    lifecycleCallbacks: {  }
