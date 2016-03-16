@@ -10,10 +10,14 @@ annonces_homepage:
     path:     /
     defaults: { _controller: AnnoncesBundle:Default:index }
 
+mes_annonces:
+    path:     /annonce/mesAnnonces
+    defaults: { _controller: AnnoncesBundle:MesAnnonces:mesAnnonces }
+
 search:
-    path:     annonce/search
+    path:     /search
     defaults: { _controller: AnnoncesBundle:Recherche:search }
 
-mes_annonces:
-    path:     annonce/mesannonces
-    defaults: { _controller: AnnoncesBundle:Recherche:mesAnnonces }
+recherche:
+    path:     /recherche
+    defaults: { _controller: AnnoncesBundle:Map:recherche }

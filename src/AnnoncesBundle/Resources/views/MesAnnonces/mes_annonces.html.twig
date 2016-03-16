@@ -1,0 +1,50 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Mes annonces{% endblock %}
+
+{% block body %}
+    <table>
+        <thead>
+            <tr>
+                <th>Aid</th>
+                <th>Atitre</th>
+                <th>Adescription</th>
+                <th>Aprix</th>
+                <th>Aimage</th>
+                <th>Aprofessionnel</th>
+                <th>Atype</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for annonce in annonces %}
+            <tr>
+                <td><a href="{{ path('annonce_show', { 'id': annonce.aId }) }}">{{ annonce.aId }}</a></td>
+                <td>{{ annonce.aTitre }}</td>
+                <td>{{ annonce.aDescription }}</td>
+                <td>{{ annonce.aPrix }}</td>
+                <td>{{ annonce.aImage }}</td>
+                <td>{% if annonce.aProfessionnel %}Yes{% else %}No{% endif %}</td>
+                <td>{% if annonce.aType %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('annonce_show', { 'id': annonce.aId }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('annonce_edit', { 'id': annonce.aId }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('annonce_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+
+{% endblock %}

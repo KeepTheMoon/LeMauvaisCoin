@@ -13,11 +13,4 @@ class RechercheControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/search');
     }
 
-    public function testMesannonces()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/mesAnnonces');
-    }
-
 }
