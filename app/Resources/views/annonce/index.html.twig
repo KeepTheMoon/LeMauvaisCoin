@@ -1,49 +1,46 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Annonce list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Aid</th>
-                <th>Atitre</th>
-                <th>Adescription</th>
-                <th>Aprix</th>
-                <th>Aimage</th>
-                <th>Aprofessionnel</th>
-                <th>Atype</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+              <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page Header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Affichage de toutes les annonces disponible
+                        <small>ici, en dessous</small>
+                    </h1>
+                    
+                </div>
+            </div>
+            {% block offre %}class="active"{% endblock %}
+            <!-- /.row -->
+            {% set cpt = 0 %}
         {% for annonce in annonces %}
-            <tr>
-                <td><a href="{{ path('annonce_show', { 'id': annonce.aId }) }}">{{ annonce.aId }}</a></td>
-                <td>{{ annonce.aTitre }}</td>
-                <td>{{ annonce.aDescription }}</td>
-                <td>{{ annonce.aPrix }}</td>
-                <td>{{ annonce.aImage }}</td>
-                <td>{% if annonce.aProfessionnel %}Yes{% else %}No{% endif %}</td>
-                <td>{% if annonce.aType %}Yes{% else %}No{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('annonce_show', { 'id': annonce.aId }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('annonce_edit', { 'id': annonce.aId }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            {% if cpt%3==0 %}
+               <div class="row">
+            {% endif %}
 
-    <ul>
-        <li>
-            <a href="{{ path('annonce_new') }}">Create a new entry</a>
-        </li>
-    </ul>
+                    <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="{{ annonce.aImage }}" alt="">
+                </a>
+                <h3>
+                    <a href="#">{{ annonce.aTitre }} - {{ annonce.aPrix }}€</a>
+                </h3>
+                <p>{% if annonce.aProfessionnel %}Professionnel{% else %}Particulier{% endif %} - {% if annonce.aType %}Offre{% else %}Demande{% endif %}</p>
+                 <a href="{{ path('annonce_show', { 'id': annonce.aId }) }}"><button type="button" class="btn btn-primary">Show</button></a>
+                            <a href="{{ path('annonce_edit', { 'id': annonce.aId }) }}"><button type="button" class="btn btn-primary">Edit</button></a>
+            </div>
+             {% if cpt%3==2 %}
+               </div>
+            {% endif %}
+            {% set cpt = cpt+1 %}
+        {% endfor %}
+
+
+            <a href="{{ path('annonce_new') }}"><button type="button" class="btn btn-primary">New</button></a>
+
+    </div>
 {% endblock %}
