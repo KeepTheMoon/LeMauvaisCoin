@@ -22,20 +22,20 @@ class __TwigTemplate_e7eef6a64943b620575db4aa874c9aea04a43ac68a4261d33ed46e85a90
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c702c15f012112a88dccde645e466e3dcb1a79baceb57a109736923be39ef577 = $this->env->getExtension("native_profiler");
-        $__internal_c702c15f012112a88dccde645e466e3dcb1a79baceb57a109736923be39ef577->enter($__internal_c702c15f012112a88dccde645e466e3dcb1a79baceb57a109736923be39ef577_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "annonce/index.html.twig"));
+        $__internal_495823af799bb3a6e573ca293970a963e45eeb6262574493909c8a4a25a10fb7 = $this->env->getExtension("native_profiler");
+        $__internal_495823af799bb3a6e573ca293970a963e45eeb6262574493909c8a4a25a10fb7->enter($__internal_495823af799bb3a6e573ca293970a963e45eeb6262574493909c8a4a25a10fb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "annonce/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c702c15f012112a88dccde645e466e3dcb1a79baceb57a109736923be39ef577->leave($__internal_c702c15f012112a88dccde645e466e3dcb1a79baceb57a109736923be39ef577_prof);
+        $__internal_495823af799bb3a6e573ca293970a963e45eeb6262574493909c8a4a25a10fb7->leave($__internal_495823af799bb3a6e573ca293970a963e45eeb6262574493909c8a4a25a10fb7_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ee135badb0803e90c090d2f81738310905bd5ea364373f371d6c14ffe050c91b = $this->env->getExtension("native_profiler");
-        $__internal_ee135badb0803e90c090d2f81738310905bd5ea364373f371d6c14ffe050c91b->enter($__internal_ee135badb0803e90c090d2f81738310905bd5ea364373f371d6c14ffe050c91b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_66954a7f3b5fbf0cf8d3b41a388533ea6699cfcd7605b996aad359d63b57e228 = $this->env->getExtension("native_profiler");
+        $__internal_66954a7f3b5fbf0cf8d3b41a388533ea6699cfcd7605b996aad359d63b57e228->enter($__internal_66954a7f3b5fbf0cf8d3b41a388533ea6699cfcd7605b996aad359d63b57e228_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "
@@ -106,10 +106,7 @@ class __TwigTemplate_e7eef6a64943b620575db4aa874c9aea04a43ac68a4261d33ed46e85a90
             // line 33
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("annonce_show", array("id" => $this->getAttribute($context["annonce"], "aId", array()))), "html", null, true);
             echo "\"><button type=\"button\" class=\"btn btn-primary\">Show</button></a>
-                            <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("annonce_edit", array("id" => $this->getAttribute($context["annonce"], "aId", array()))), "html", null, true);
-            echo "\"><button type=\"button\" class=\"btn btn-primary\">Edit</button></a>
+                            
             </div>
              ";
             // line 36
@@ -138,19 +135,19 @@ class __TwigTemplate_e7eef6a64943b620575db4aa874c9aea04a43ac68a4261d33ed46e85a90
     </div>
 ";
         
-        $__internal_ee135badb0803e90c090d2f81738310905bd5ea364373f371d6c14ffe050c91b->leave($__internal_ee135badb0803e90c090d2f81738310905bd5ea364373f371d6c14ffe050c91b_prof);
+        $__internal_66954a7f3b5fbf0cf8d3b41a388533ea6699cfcd7605b996aad359d63b57e228->leave($__internal_66954a7f3b5fbf0cf8d3b41a388533ea6699cfcd7605b996aad359d63b57e228_prof);
 
     }
 
     // line 17
     public function block_offre($context, array $blocks = array())
     {
-        $__internal_987a885a955cde892139b8e4fc7aa5fbf99559792d6bc169064f2e9c637b390f = $this->env->getExtension("native_profiler");
-        $__internal_987a885a955cde892139b8e4fc7aa5fbf99559792d6bc169064f2e9c637b390f->enter($__internal_987a885a955cde892139b8e4fc7aa5fbf99559792d6bc169064f2e9c637b390f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "offre"));
+        $__internal_ddd0ffc2af4a399dd41853a328a25c83c9afceea75c989b36b5b76e4f9e0da2a = $this->env->getExtension("native_profiler");
+        $__internal_ddd0ffc2af4a399dd41853a328a25c83c9afceea75c989b36b5b76e4f9e0da2a->enter($__internal_ddd0ffc2af4a399dd41853a328a25c83c9afceea75c989b36b5b76e4f9e0da2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "offre"));
 
         echo "class=\"active\"";
         
-        $__internal_987a885a955cde892139b8e4fc7aa5fbf99559792d6bc169064f2e9c637b390f->leave($__internal_987a885a955cde892139b8e4fc7aa5fbf99559792d6bc169064f2e9c637b390f_prof);
+        $__internal_ddd0ffc2af4a399dd41853a328a25c83c9afceea75c989b36b5b76e4f9e0da2a->leave($__internal_ddd0ffc2af4a399dd41853a328a25c83c9afceea75c989b36b5b76e4f9e0da2a_prof);
 
     }
 
@@ -166,7 +163,7 @@ class __TwigTemplate_e7eef6a64943b620575db4aa874c9aea04a43ac68a4261d33ed46e85a90
 
     public function getDebugInfo()
     {
-        return array (  146 => 17,  135 => 43,  131 => 41,  125 => 40,  122 => 39,  118 => 37,  116 => 36,  111 => 34,  107 => 33,  93 => 32,  86 => 30,  80 => 27,  75 => 24,  71 => 22,  68 => 21,  63 => 20,  61 => 19,  58 => 18,  56 => 17,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  143 => 17,  132 => 43,  128 => 41,  122 => 40,  119 => 39,  115 => 37,  113 => 36,  107 => 33,  93 => 32,  86 => 30,  80 => 27,  75 => 24,  71 => 22,  68 => 21,  63 => 20,  61 => 19,  58 => 18,  56 => 17,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -202,7 +199,7 @@ class __TwigTemplate_e7eef6a64943b620575db4aa874c9aea04a43ac68a4261d33ed46e85a90
 /*                 </h3>*/
 /*                 <p>{% if annonce.aProfessionnel %}Professionnel{% else %}Particulier{% endif %} - {% if annonce.aType %}Offre{% else %}Demande{% endif %}</p>*/
 /*                  <a href="{{ path('annonce_show', { 'id': annonce.aId }) }}"><button type="button" class="btn btn-primary">Show</button></a>*/
-/*                             <a href="{{ path('annonce_edit', { 'id': annonce.aId }) }}"><button type="button" class="btn btn-primary">Edit</button></a>*/
+/*                             */
 /*             </div>*/
 /*              {% if cpt%3==2 %}*/
 /*                </div>*/

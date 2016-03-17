@@ -1,6 +1,6 @@
 <?php
 
-/* base.html.twig */
+/* ::base.html.twig */
 class __TwigTemplate_20cc095624183b276c635a9cca159d9a0fbdef57c1f27396db3ad7b4741aed0a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -18,8 +18,8 @@ class __TwigTemplate_20cc095624183b276c635a9cca159d9a0fbdef57c1f27396db3ad7b4741
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7612d061c67ca1727ccb785a9621bf9525d74925a34943d026f4dc3c53112664 = $this->env->getExtension("native_profiler");
-        $__internal_7612d061c67ca1727ccb785a9621bf9525d74925a34943d026f4dc3c53112664->enter($__internal_7612d061c67ca1727ccb785a9621bf9525d74925a34943d026f4dc3c53112664_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_3e3210c11920b65be0552d5722661e95fb418a49add5b55d4976302e074e5a3c = $this->env->getExtension("native_profiler");
+        $__internal_3e3210c11920b65be0552d5722661e95fb418a49add5b55d4976302e074e5a3c->enter($__internal_3e3210c11920b65be0552d5722661e95fb418a49add5b55d4976302e074e5a3c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,10 +57,10 @@ class __TwigTemplate_20cc095624183b276c635a9cca159d9a0fbdef57c1f27396db3ad7b4741
         // line 26
         $this->displayBlock('offre', $context, $blocks);
         echo " >
-                        <a href=\"#\">Offres</a>
+                        <a href=\"http://localhost:8000/app_dev.php/annonce\">Offres</a>
                     </li>
                     <li>
-                        <a href=\"#\">Demandes</a>
+                        <a href=\"http://localhost:8000/app_dev.php/annonce/mesAnnonces\">Mes annonces</a>
                     </li>
                     <li>
                         <a href=\"#\">Mon compte</a>
@@ -87,47 +87,47 @@ background-image: url(\"bg.jpg\");
     </body>
 </html>";
         
-        $__internal_7612d061c67ca1727ccb785a9621bf9525d74925a34943d026f4dc3c53112664->leave($__internal_7612d061c67ca1727ccb785a9621bf9525d74925a34943d026f4dc3c53112664_prof);
+        $__internal_3e3210c11920b65be0552d5722661e95fb418a49add5b55d4976302e074e5a3c->leave($__internal_3e3210c11920b65be0552d5722661e95fb418a49add5b55d4976302e074e5a3c_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_62cf1ac1b8ffd69147d5130a1673fdc03b62730012447635269a4d4736afe58a = $this->env->getExtension("native_profiler");
-        $__internal_62cf1ac1b8ffd69147d5130a1673fdc03b62730012447635269a4d4736afe58a->enter($__internal_62cf1ac1b8ffd69147d5130a1673fdc03b62730012447635269a4d4736afe58a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c1ce5fd942a05a2f7e48816df199239d386797d4519d3feb5c4aba2447dab2e4 = $this->env->getExtension("native_profiler");
+        $__internal_c1ce5fd942a05a2f7e48816df199239d386797d4519d3feb5c4aba2447dab2e4->enter($__internal_c1ce5fd942a05a2f7e48816df199239d386797d4519d3feb5c4aba2447dab2e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "LeBonCoin.fr";
         
-        $__internal_62cf1ac1b8ffd69147d5130a1673fdc03b62730012447635269a4d4736afe58a->leave($__internal_62cf1ac1b8ffd69147d5130a1673fdc03b62730012447635269a4d4736afe58a_prof);
+        $__internal_c1ce5fd942a05a2f7e48816df199239d386797d4519d3feb5c4aba2447dab2e4->leave($__internal_c1ce5fd942a05a2f7e48816df199239d386797d4519d3feb5c4aba2447dab2e4_prof);
 
     }
 
     // line 26
     public function block_offre($context, array $blocks = array())
     {
-        $__internal_021eed04f3a3fa8947e069d604a74176ea8b3f7ead8ab8b522dd66cfa9239c67 = $this->env->getExtension("native_profiler");
-        $__internal_021eed04f3a3fa8947e069d604a74176ea8b3f7ead8ab8b522dd66cfa9239c67->enter($__internal_021eed04f3a3fa8947e069d604a74176ea8b3f7ead8ab8b522dd66cfa9239c67_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "offre"));
+        $__internal_a916835e55f907ec0ce54b807f322c9b634cf2db0a6272e3908d15b71311d4dc = $this->env->getExtension("native_profiler");
+        $__internal_a916835e55f907ec0ce54b807f322c9b634cf2db0a6272e3908d15b71311d4dc->enter($__internal_a916835e55f907ec0ce54b807f322c9b634cf2db0a6272e3908d15b71311d4dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "offre"));
 
         
-        $__internal_021eed04f3a3fa8947e069d604a74176ea8b3f7ead8ab8b522dd66cfa9239c67->leave($__internal_021eed04f3a3fa8947e069d604a74176ea8b3f7ead8ab8b522dd66cfa9239c67_prof);
+        $__internal_a916835e55f907ec0ce54b807f322c9b634cf2db0a6272e3908d15b71311d4dc->leave($__internal_a916835e55f907ec0ce54b807f322c9b634cf2db0a6272e3908d15b71311d4dc_prof);
 
     }
 
     // line 41
     public function block_body($context, array $blocks = array())
     {
-        $__internal_00a4114e3e155ecf39b9e126c34bb499baa74ddabdc0d17db236367274b4c994 = $this->env->getExtension("native_profiler");
-        $__internal_00a4114e3e155ecf39b9e126c34bb499baa74ddabdc0d17db236367274b4c994->enter($__internal_00a4114e3e155ecf39b9e126c34bb499baa74ddabdc0d17db236367274b4c994_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ae2f38e845a0bc709508a9e58a76d93d393caab7f931eb8fcb5f233d4ee3a0bc = $this->env->getExtension("native_profiler");
+        $__internal_ae2f38e845a0bc709508a9e58a76d93d393caab7f931eb8fcb5f233d4ee3a0bc->enter($__internal_ae2f38e845a0bc709508a9e58a76d93d393caab7f931eb8fcb5f233d4ee3a0bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_00a4114e3e155ecf39b9e126c34bb499baa74ddabdc0d17db236367274b4c994->leave($__internal_00a4114e3e155ecf39b9e126c34bb499baa74ddabdc0d17db236367274b4c994_prof);
+        $__internal_ae2f38e845a0bc709508a9e58a76d93d393caab7f931eb8fcb5f233d4ee3a0bc->leave($__internal_ae2f38e845a0bc709508a9e58a76d93d393caab7f931eb8fcb5f233d4ee3a0bc_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "base.html.twig";
+        return "::base.html.twig";
     }
 
     public function isTraitable()
@@ -166,10 +166,10 @@ background-image: url(\"bg.jpg\");
 /*             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*/
 /*                 <ul class="nav navbar-nav">*/
 /*                     <li {% block offre %}{% endblock %} >*/
-/*                         <a href="#">Offres</a>*/
+/*                         <a href="http://localhost:8000/app_dev.php/annonce">Offres</a>*/
 /*                     </li>*/
 /*                     <li>*/
-/*                         <a href="#">Demandes</a>*/
+/*                         <a href="http://localhost:8000/app_dev.php/annonce/mesAnnonces">Mes annonces</a>*/
 /*                     </li>*/
 /*                     <li>*/
 /*                         <a href="#">Mon compte</a>*/
