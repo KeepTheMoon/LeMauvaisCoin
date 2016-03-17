@@ -8,23 +8,17 @@ use Doctrine\ORM\QueryBuilder;
 
 class AnnonceRepository extends EntityRepository
 {
+
   public function findByRegion($idRegion)
   {
 
-  	$qb = this->createQueryBuilder('a'); 
+  $query = $this->_em->createQuery('SELECT * FROM AnnoncesBundle:Annonce  NATURAL JOIN LocalisationBundle:Ville
+    WHERE aIdVille = IdVille ');
+  $results = $query->getResult();
 
-  $qb->where('a.aville = :author')
-       ->setParameter('author', $author)
-     ->andWhere('a.date < :year')
-       ->setParameter('year', $year)
-     ->orderBy('a.date', 'DESC')
-  ;
-
-  return $qb
-    ->getQuery()
-    ->getResult()
-  ;
-
+  echo $results;
+  return $results;
+  
 
   }
 }

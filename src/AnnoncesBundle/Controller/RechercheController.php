@@ -36,9 +36,9 @@ class RechercheController extends Controller
     public function searchAction()
     {
       
-        echo "Coucou :)";
-
-        return $this->render('AnnoncesBundle:Recherche:search.html.twig', array(
+        $res = findByRegion(82);
+        echo 'res :';
+        echo res;
             // ...
         ));
     }
