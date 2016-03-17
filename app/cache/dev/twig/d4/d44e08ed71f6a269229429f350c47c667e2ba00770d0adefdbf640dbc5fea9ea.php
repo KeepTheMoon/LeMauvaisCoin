@@ -16,62 +16,71 @@ class __TwigTemplate_84e39edf78ee760cd7367522910b4f626a0d62a529938e775ac6f4d2670
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0c6176b697acc561bab17914148a1aa3639c846f8487428b1ab11e4674affe75 = $this->env->getExtension("native_profiler");
-        $__internal_0c6176b697acc561bab17914148a1aa3639c846f8487428b1ab11e4674affe75->enter($__internal_0c6176b697acc561bab17914148a1aa3639c846f8487428b1ab11e4674affe75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle::layout.html.twig"));
+        $__internal_b13f6959d567b4727e2c397deca90863db9b78861a45fd28065ca95f410d36ac = $this->env->getExtension("native_profiler");
+        $__internal_b13f6959d567b4727e2c397deca90863db9b78861a45fd28065ca95f410d36ac->enter($__internal_b13f6959d567b4727e2c397deca90863db9b78861a45fd28065ca95f410d36ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
 <html>
     <head>
         <meta charset=\"UTF-8\" />
+        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" integrity=\"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\" crossorigin=\"anonymous\">
+
+<link rel=\"stylesheet\" href=\"background.css\" type=\"text/css\" />
+<!-- Optional theme -->
+<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css\" integrity=\"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r\" crossorigin=\"anonymous\">
+<link href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("login.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" />
     </head>
     <body>
         <div>
             ";
-        // line 8
+        // line 14
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 9
+            // line 15
             echo "                ";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logged_in_as", array("%username%" => $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array())), "FOSUserBundle"), "html", null, true);
             echo " |
-                <a href=\"";
-            // line 10
+                <button class=\"btn btn-lm btn-primary\" href=\"";
+            // line 16
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
             echo "\">
                     ";
-            // line 11
+            // line 17
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logout", array(), "FOSUserBundle"), "html", null, true);
             echo "
-                </a>
+                </button>
             ";
         } else {
-            // line 14
-            echo "                <a href=\"";
+            // line 20
+            echo "                <button class=\"btn btn-lm btn-primary\" href=\"";
             echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
             echo "\">";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.login", array(), "FOSUserBundle"), "html", null, true);
-            echo "</a>
+            echo "</button>
             ";
         }
-        // line 16
+        // line 22
         echo "        </div>
 
         ";
-        // line 18
+        // line 24
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashBag", array()), "all", array()));
         foreach ($context['_seq'] as $context["type"] => $context["messages"]) {
-            // line 19
+            // line 25
             echo "            ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 20
+                // line 26
                 echo "                <div class=\"";
                 echo twig_escape_filter($this->env, $context["type"], "html", null, true);
                 echo "\">
                     ";
-                // line 21
+                // line 27
                 echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($context["message"], array(), "FOSUserBundle"), "html", null, true);
                 echo "
                 </div>
@@ -80,38 +89,39 @@ class __TwigTemplate_84e39edf78ee760cd7367522910b4f626a0d62a529938e775ac6f4d2670
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 24
+            // line 30
             echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['type'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 25
+        // line 31
         echo "
         <div>
             ";
-        // line 27
+        // line 33
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 29
+        // line 35
         echo "        </div>
+<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" integrity=\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\" crossorigin=\"anonymous\"></script>
+
     </body>
-</html>
-";
+</html>";
         
-        $__internal_0c6176b697acc561bab17914148a1aa3639c846f8487428b1ab11e4674affe75->leave($__internal_0c6176b697acc561bab17914148a1aa3639c846f8487428b1ab11e4674affe75_prof);
+        $__internal_b13f6959d567b4727e2c397deca90863db9b78861a45fd28065ca95f410d36ac->leave($__internal_b13f6959d567b4727e2c397deca90863db9b78861a45fd28065ca95f410d36ac_prof);
 
     }
 
-    // line 27
+    // line 33
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_978ad8503f67e332eb99f7572ce46abf9fdb4eb923d73aba936236c32a3c163b = $this->env->getExtension("native_profiler");
-        $__internal_978ad8503f67e332eb99f7572ce46abf9fdb4eb923d73aba936236c32a3c163b->enter($__internal_978ad8503f67e332eb99f7572ce46abf9fdb4eb923d73aba936236c32a3c163b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_e47294d0f6f06521349fed147aa28dd861cbbbbb953def0e5767e58be4e0ae48 = $this->env->getExtension("native_profiler");
+        $__internal_e47294d0f6f06521349fed147aa28dd861cbbbbb953def0e5767e58be4e0ae48->enter($__internal_e47294d0f6f06521349fed147aa28dd861cbbbbb953def0e5767e58be4e0ae48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
-        // line 28
+        // line 34
         echo "            ";
         
-        $__internal_978ad8503f67e332eb99f7572ce46abf9fdb4eb923d73aba936236c32a3c163b->leave($__internal_978ad8503f67e332eb99f7572ce46abf9fdb4eb923d73aba936236c32a3c163b_prof);
+        $__internal_e47294d0f6f06521349fed147aa28dd861cbbbbb953def0e5767e58be4e0ae48->leave($__internal_e47294d0f6f06521349fed147aa28dd861cbbbbb953def0e5767e58be4e0ae48_prof);
 
     }
 
@@ -127,23 +137,29 @@ class __TwigTemplate_84e39edf78ee760cd7367522910b4f626a0d62a529938e775ac6f4d2670
 
     public function getDebugInfo()
     {
-        return array (  112 => 28,  106 => 27,  96 => 29,  94 => 27,  90 => 25,  84 => 24,  75 => 21,  70 => 20,  65 => 19,  61 => 18,  57 => 16,  49 => 14,  43 => 11,  39 => 10,  34 => 9,  32 => 8,  23 => 1,);
+        return array (  122 => 34,  116 => 33,  105 => 35,  103 => 33,  99 => 31,  93 => 30,  84 => 27,  79 => 26,  74 => 25,  70 => 24,  66 => 22,  58 => 20,  52 => 17,  48 => 16,  43 => 15,  41 => 14,  34 => 10,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
 /* <html>*/
 /*     <head>*/
 /*         <meta charset="UTF-8" />*/
+/*         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">*/
+/* */
+/* <link rel="stylesheet" href="background.css" type="text/css" />*/
+/* <!-- Optional theme -->*/
+/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">*/
+/* <link href="{{ asset('login.css') }}" rel="stylesheet" />*/
 /*     </head>*/
 /*     <body>*/
 /*         <div>*/
 /*             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
 /*                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |*/
-/*                 <a href="{{ path('fos_user_security_logout') }}">*/
+/*                 <button class="btn btn-lm btn-primary" href="{{ path('fos_user_security_logout') }}">*/
 /*                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}*/
-/*                 </a>*/
+/*                 </button>*/
 /*             {% else %}*/
-/*                 <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>*/
+/*                 <button class="btn btn-lm btn-primary" href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</button>*/
 /*             {% endif %}*/
 /*         </div>*/
 /* */
@@ -159,6 +175,7 @@ class __TwigTemplate_84e39edf78ee760cd7367522910b4f626a0d62a529938e775ac6f4d2670
 /*             {% block fos_user_content %}*/
 /*             {% endblock fos_user_content %}*/
 /*         </div>*/
+/* <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>*/
+/* */
 /*     </body>*/
 /* </html>*/
-/* */
