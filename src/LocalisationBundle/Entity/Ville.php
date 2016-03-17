@@ -25,7 +25,7 @@ class Ville
     private $nomville;
 
     /**
-     * @var string
+     * @var @var \LocalisationBundle\Entity\Departement
      */
     private $iddepartement;
 
@@ -40,6 +40,15 @@ class Ville
         return $this->idville;
     }
 
+      /**
+     * Get idville
+     *
+     * @return string 
+     */
+    public function getId()
+    {
+        return $this->idville;
+    }
     /**
      * Set codepostal
      *
@@ -92,7 +101,7 @@ class Ville
      * @param string $iddepartement
      * @return Ville
      */
-    public function setIddepartement($iddepartement)
+    public function setIddepartement(\LocalisationBundle\Entity\Departement $iddepartement = null)
     {
         $this->iddepartement = $iddepartement;
 
@@ -102,7 +111,7 @@ class Ville
     /**
      * Get iddepartement
      *
-     * @return string 
+     * @return \LocalisationBundle\Entity\Departement
      */
     public function getIddepartement()
     {

@@ -5,7 +5,8 @@ namespace AnnoncesBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Annonce
+ * @ORM\Entity
+ * @ORM\Table(name="annonce")
  */
 class Annonce
 {
@@ -55,7 +56,7 @@ class Annonce
     private $auser;
 
     /**
-     * @var \LocalisationBundle\Entity\Ville
+     * @var string
      */
     private $aville;
 
@@ -285,7 +286,7 @@ class Annonce
     /**
      * Set aville
      *
-     * @param \LocalisationBundle\Entity\Ville $aville
+     * @param string
      * @return Annonce
      */
     public function setAville(\LocalisationBundle\Entity\Ville $aville )
@@ -298,7 +299,7 @@ class Annonce
     /**
      * Get aville
      *
-     * @return \LocalisationBundle\Entity\Ville 
+     * @return string
      */
     public function getAville()
     {

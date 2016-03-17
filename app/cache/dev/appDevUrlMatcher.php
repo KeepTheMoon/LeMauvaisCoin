@@ -377,6 +377,68 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/ville')) {
+            // ville_index
+            if (rtrim($pathinfo, '/') === '/ville') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_ville_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'ville_index');
+                }
+
+                return array (  '_controller' => 'LocalisationBundle\\Controller\\VilleController::indexAction',  '_route' => 'ville_index',);
+            }
+            not_ville_index:
+
+            // ville_show
+            if (preg_match('#^/ville/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_ville_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ville_show')), array (  '_controller' => 'LocalisationBundle\\Controller\\VilleController::showAction',));
+            }
+            not_ville_show:
+
+            // ville_new
+            if ($pathinfo === '/ville/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_ville_new;
+                }
+
+                return array (  '_controller' => 'LocalisationBundle\\Controller\\VilleController::newAction',  '_route' => 'ville_new',);
+            }
+            not_ville_new:
+
+            // ville_edit
+            if (preg_match('#^/ville/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_ville_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ville_edit')), array (  '_controller' => 'LocalisationBundle\\Controller\\VilleController::editAction',));
+            }
+            not_ville_edit:
+
+            // ville_delete
+            if (preg_match('#^/ville/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_ville_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ville_delete')), array (  '_controller' => 'LocalisationBundle\\Controller\\VilleController::deleteAction',));
+            }
+            not_ville_delete:
+
+        }
+
         // localisation_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

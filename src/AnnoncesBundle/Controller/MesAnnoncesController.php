@@ -25,7 +25,6 @@ class MesAnnoncesController extends Controller
     	// On récupère la Query à partir du QueryBuilder
    		 $query = $queryBuilder->findByAuser($user);
 
-
     	// On récupère les résultats à partir de la Query
     	$results = $query;
 

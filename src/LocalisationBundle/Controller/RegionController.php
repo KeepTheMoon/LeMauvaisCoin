@@ -44,7 +44,7 @@ class RegionController extends Controller
             $em->persist($region);
             $em->flush();
 
-            return $this->redirectToRoute('region_show', array('id' => $region->getId()));
+            return $this->redirectToRoute('region_show', array('id' => $region->getIdregion()));
         }
 
         return $this->render('region/new.html.twig', array(
@@ -82,7 +82,7 @@ class RegionController extends Controller
             $em->persist($region);
             $em->flush();
 
-            return $this->redirectToRoute('region_edit', array('id' => $region->getId()));
+            return $this->redirectToRoute('region_edit', array('id' => $region->getIdregion()));
         }
 
         return $this->render('region/edit.html.twig', array(
@@ -120,7 +120,7 @@ class RegionController extends Controller
     private function createDeleteForm(Region $region)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('region_delete', array('id' => $region->getId())))
+            ->setAction($this->generateUrl('region_delete', array('id' => $region->getIdregion())))
             ->setMethod('DELETE')
             ->getForm()
         ;

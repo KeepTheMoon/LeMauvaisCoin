@@ -6,6 +6,10 @@ localisation_region:
     resource: "@LocalisationBundle/Resources/config/routing/region.yml"
     prefix:   /region
 
+localisation_ville:
+    resource: "@LocalisationBundle/Resources/config/routing/ville.yml"
+    prefix:   /ville
+
 
 localisation_homepage:
     path:     /

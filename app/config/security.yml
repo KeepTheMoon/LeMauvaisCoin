@@ -28,6 +28,6 @@ security:
         - { path: ^/annonce/new, role: ROLE_USER }
         - { path: ^/annonce/mesAnnonces, role: ROLE_USER }
         - { path: ^/categorie , role: ROLE_ADMIN }
-        - { path: ^/ville , role: ROLE_ADMIN }
-        - { path: ^/region , role: ROLE_ADMIN }
-        - { path: ^/departement , role: ROLE_ADMIN }
+        - { path: ^/ville , role: ROLE_USER}
+        - { path: ^/region , role: ROLE_USER}
+        - { path: ^/departement , role: ROLE_USER }

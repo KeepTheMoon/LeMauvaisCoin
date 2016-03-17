@@ -9,6 +9,10 @@
                 <th>Titre </th>
                 <td>{{ annonce.aTitre }}</td>
             </tr>
+              <tr>
+                <th>Categorie</th>
+                <td>{{annonce.aNomcat}}</td>
+            </tr>
             <tr>
                 <th>Description</th>
                 <td>{{ annonce.aDescription }}</td>
@@ -28,6 +32,11 @@
             <tr>
                 <th>Type</th>
                 <td>{% if annonce.aType %}Offre{% else %}Demande{% endif %}</td>
+            </tr>
+
+            <tr>
+                <th>Ville</th>
+                <td>{{annonce.aville}}</td>
             </tr>
             <tr>
                 <th>Contact</th>

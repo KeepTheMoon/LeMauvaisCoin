@@ -30,7 +30,17 @@ class Departement
      *
      * @return string 
      */
-    public function getIddepartement()
+    public function getId()
+    {
+        return $this->iddepartement;
+    }
+
+      /**
+     * Get iddepartement
+     *
+     * @return string 
+     */
+    public function getIdDepartement()
     {
         return $this->iddepartement;
     }

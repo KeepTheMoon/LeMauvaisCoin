@@ -25,10 +25,22 @@ class Region
      *
      * @return integer 
      */
-    public function getIdregion()
+    public function getId()
     {
         return $this->idregion;
     }
+
+
+    /**
+     * Get idregion
+     *
+     * @return integer 
+     */
+    public function getIdRegion()
+    {
+        return $this->idregion;
+    }
+
 
     /**
      * Set nomregion
@@ -51,5 +63,15 @@ class Region
     public function getNomregion()
     {
         return $this->nomregion;
+    }
+
+    /**
+     * __toString()
+     *
+     * @return string 
+     */
+    public function __toString()
+    {
+        return $this->getNomregion();
     }
 }

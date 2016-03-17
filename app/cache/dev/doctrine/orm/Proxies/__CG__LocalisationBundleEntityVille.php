@@ -191,6 +191,17 @@ class Ville extends \LocalisationBundle\Entity\Ville implements \Doctrine\ORM\Pr
     /**
      * {@inheritDoc}
      */
+    public function getId()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+
+        return parent::getId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setCodepostal($codepostal)
     {
 
@@ -235,7 +246,7 @@ class Ville extends \LocalisationBundle\Entity\Ville implements \Doctrine\ORM\Pr
     /**
      * {@inheritDoc}
      */
-    public function setIddepartement($iddepartement)
+    public function setIddepartement(\LocalisationBundle\Entity\Departement $iddepartement = NULL)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIddepartement', array($iddepartement));
