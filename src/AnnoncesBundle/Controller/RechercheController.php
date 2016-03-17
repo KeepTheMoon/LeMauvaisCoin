@@ -30,27 +30,13 @@ class RechercheController extends Controller
 
      
 
-     /**
-     * Finds and displays a Annonce entity.
-     *
-     * @Route("/{id}", name="annonce_show")
-     * @Method("GET")
-     */
-    public function depAction(Annonce $annonce)
-    {
-
-    }
+ 
 
 
     public function searchAction()
     {
-        // $em = $this->getDoctrine()->getManager();
-
-        // $qb = $em->createQueryBuilder('a');
-
-        // $qb->leftJoin('a.getAville().idville aville');
-
-        // echo $qb->getSqlQuery();
+      
+        echo "Coucou :)";
 
         return $this->render('AnnoncesBundle:Recherche:search.html.twig', array(
             // ...
